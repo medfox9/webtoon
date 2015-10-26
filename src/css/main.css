@@ -1,0 +1,13 @@
+#main {
+  width: 600px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -250px -300px; }
+  #main .toon {
+    width: 600px;
+    height: 400px;
+    background: url("http://dummyimage.com/600x400"); }
+
+/*# sourceMappingURL=main.css.map */
