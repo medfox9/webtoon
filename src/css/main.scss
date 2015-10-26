@@ -1,3 +1,17 @@
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+
+
+.webfont {font-family: 'Walter Turncoat', cursive !important;}
+.noto {font-family:'Noto Sans Korean', sans-serif !important;}
+body {font-family: 'Noto Sans Korean', sans-serif;}
+ul {list-style: none;margin:0;padding:0;}
+.browserupgrade {
+ background:#CC1A56;
+  padding:10px 0;
+  color:#fff;
+  text-align:center;
+}
 #main {
   width:600px;
   height:500px;
@@ -8,6 +22,41 @@
   .toon {
     width:600px;
     height:400px;
-    background:url('http://dummyimage.com/600x400')
+    position:relative;
+    border:3px solid #ccc;
   }
 }
+.page {display:none;}
+.control {}
+
+.loading {
+  position:relative;
+  width:100%;
+  height:100%;
+  ul {
+    overflow:hidden;
+    li {@extend .webfont;position:absolute;font-weight:bold;color:#333}
+    li.txt1 {left:80px;top:50px;font-size:150px;}
+    li.txt2 {left:164px;top:81px;font-size:82px;}
+    li.txt3 {left:194px;top:152px;font-size:55px;}
+    li.txt4 {left:220px;top:130px;font-size:70px;}
+    li.txt5 {left:250px;top:50px;font-size:140px;}
+    li.txt6 {left:367px;top:145px;font-size:60px;}
+    li.txt7 {left:400px;top:145px;font-size:60px;}
+    li.txt8 {left:440px;top:145px;font-size:60px;}
+    li.logo {left:385px;top:120px;}
+  }
+}
+.bx-controls {text-align:center;margin-top:20px;}
+.bx-pager-item {display:inline-block;margin-left:10px}
+.bx-pager-item:first-of-type {margin-left:0;}
+a {text-decoration:none;color:#555555}
+.tit {
+  position:absolute;
+  left:50%;top:80%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  h1 {@extend .noto;font-size:15px;color:#CC1A56}
+}
+
+footer {text-align:center;background:#c0c0c0;padding:10px 0;color:#fff;font-size:12px;position:fixed;bottom:0;left:0;width:100%;box-sizing:border-box}
