@@ -35,6 +35,58 @@ ul {
 
 .page {
   display: none; }
+  .page li {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden; }
+  .page .item {
+    position: absolute; }
+  .page .sin01 .m01 {
+    left: 0;
+    top: 0; }
+  .page .sin01 .m02 {
+    right: 216px;
+    top: 100px; }
+  .page .sin01 .say01 {
+    left: -43px;
+    top: -36px; }
+  .page .sin01 .say02 {
+    left: 287px;
+    top: 264px; }
+  .page .sin02 .m01 {
+    left: 231px;
+    top: 96px; }
+  .page .sin03 .bg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .page .sin04 .m01 {
+    left: 100px;
+    top: 50px; }
+  .page .sin04 .m02 {
+    left: 0;
+    top: 0; }
+  .page .sin04 .m03 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .page .sin05 .m01 {
+    left: 200px;
+    top: 260px; }
+  .page .sin05 .m02 {
+    left: 20px;
+    top: 50px; }
+  .page .sin06 .m01 {
+    left: 320px;
+    bottom: -13px; }
+  .page .end .item {
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .loading {
   position: relative;
@@ -45,7 +97,8 @@ ul {
     .loading ul li {
       position: absolute;
       font-weight: bold;
-      color: #333; }
+      color: #333;
+      opacity: 1; }
     .loading ul li.txt1 {
       left: 80px;
       top: 50px;
@@ -81,6 +134,18 @@ ul {
     .loading ul li.logo {
       left: 385px;
       top: 120px; }
+  .loading.ready ul li {
+    font-size: 10%;
+    left: 50%;
+    top: 50%;
+    opacity: 0; }
+  .loading .start {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    width: 100px;
+    margin-left: -50px;
+    display: none; }
 
 .bx-controls {
   text-align: center;
@@ -106,6 +171,41 @@ a {
   .tit h1 {
     font-size: 15px;
     color: #CC1A56; }
+
+.bx-controls-direction a {
+  position: absolute; }
+  .bx-controls-direction a img {
+    width: 50%; }
+.bx-controls-direction a.disabled {
+  display: none; }
+.bx-controls-direction .bx-prev {
+  left: -227px;
+  top: 24%; }
+.bx-controls-direction .bx-next {
+  right: -227px;
+  top: 24%; }
+
+.bx-pager-link.active {
+  font-weight: bold;
+  color: #000; }
+
+.note {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  text-align: center;
+  width: 74%;
+  padding-left: 70px;
+  display: none; }
+
+.bx-caption {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  background: #333333;
+  font-size: 12px;
+  width: 100%;
+  padding: 5px; }
 
 footer {
   text-align: center;

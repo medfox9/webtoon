@@ -26,7 +26,42 @@ ul {list-style: none;margin:0;padding:0;}
     border:3px solid #ccc;
   }
 }
-.page {display:none;}
+.page {
+  display:none;
+  li {position:relative;width:100%;height:400px;overflow:hidden;}
+  .item {position:absolute}
+  .sin01 {
+    .m01 {left:0;top:0}
+    .m02 {right:216px;top:100px;}
+    .say01 {left:-43px;top:-36px}
+    .say02 {left:287px;top:264px}
+  }
+  .sin02 {
+    .m01 {left:231px;top:96px;}
+  }
+
+  .sin03 {
+    .bg {
+      position:absolute;left:50%;top:50%;
+      transform:translate(-50%,-50%);
+    }
+  }
+  .sin04 {
+    .m01 {left:100px;top:50px;}
+    .m02 {left:0;top:0;}
+    .m03 {left:50%;top:50%;transform:translate(-50%,-50%)}
+  }
+  .sin05 {
+    .m01 {left:200px;top:260px}
+    .m02 {left:20px;top:50px}
+  }
+  .sin06 {
+    .m01 {left:320px;bottom:-13px;}
+  }
+  .end {
+    .item {display:block;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;}
+  }
+}
 .control {}
 
 .loading {
@@ -35,16 +70,32 @@ ul {list-style: none;margin:0;padding:0;}
   height:100%;
   ul {
     overflow:hidden;
-    li {@extend .webfont;position:absolute;font-weight:bold;color:#333}
+    li {@extend .webfont;position:absolute;font-weight:bold;color:#333;opacity: 1;}
     li.txt1 {left:80px;top:50px;font-size:150px;}
     li.txt2 {left:164px;top:81px;font-size:82px;}
-    li.txt3 {left:194px;top:152px;font-size:55px;}
+    li.txt3 {left:194px;top:152px;font-size:55px}
     li.txt4 {left:220px;top:130px;font-size:70px;}
     li.txt5 {left:250px;top:50px;font-size:140px;}
     li.txt6 {left:367px;top:145px;font-size:60px;}
     li.txt7 {left:400px;top:145px;font-size:60px;}
     li.txt8 {left:440px;top:145px;font-size:60px;}
     li.logo {left:385px;top:120px;}
+  }
+  &.ready {
+    ul li {
+      font-size:10%;
+      left:50%;
+      top:50%;
+      opacity: 0;
+    }
+  }
+  .start {
+    position:absolute;
+    left:50%;
+    bottom:100px;
+    width:100px;
+    margin-left:-50px;
+    display:none;
   }
 }
 .bx-controls {text-align:center;margin-top:20px;}
@@ -59,4 +110,25 @@ a {text-decoration:none;color:#555555}
   h1 {@extend .noto;font-size:15px;color:#CC1A56}
 }
 
+.bx-controls-direction {
+  a {
+    position:absolute;
+    img {width:50%}
+  }
+  a.disabled {display:none;}
+  .bx-prev {left:-227px;top:24%;}
+  .bx-next {right:-227px;top:24%;}
+}
+
+.bx-pager-link.active {font-weight:bold;color:#000;}
+.note {
+  position:absolute;
+  left:0;
+  bottom:15px;
+  text-align:center;
+  width:74%;
+  padding-left:70px;
+  display:none;
+}
+.bx-caption {position:absolute;bottom:0px;color:#fff;background:#333333;font-size:12px;width:100%;padding:5px}
 footer {text-align:center;background:#c0c0c0;padding:10px 0;color:#fff;font-size:12px;position:fixed;bottom:0;left:0;width:100%;box-sizing:border-box}
